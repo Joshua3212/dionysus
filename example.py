@@ -51,19 +51,19 @@ response_schema = {
 """
 
 
-@a.on("/fake", schema=data_schema, response_schema=response_schema)
-def reply_fake(data):
+@a.on("/dummy", schema=data_schema, response_schema=response_schema)
+def reply_dummy_adapter(data):
     print(data)
     return {"a": "b"}
 
 
 """
-    Functions do not need to reply.
+    Functions do not need to return anything.
 """
 
 
-@a.on("/some_enpoint", schema=data_schema)
-def noreply_hey(data):
+@a.on("/some_other_endpoint", schema=data_schema)
+def noreply(data):
     print(data)
 
 
