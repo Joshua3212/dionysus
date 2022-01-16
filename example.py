@@ -1,4 +1,4 @@
-from dionysus.app import App
+from app import App
 from schema import Optional
 
 # from dionysus.adapters.redis import RedisAdapter
