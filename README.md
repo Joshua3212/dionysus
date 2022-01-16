@@ -7,3 +7,6 @@ Tiny framework for interacting with http and other protocols using custom adapte
 
 # Installation
     pip3 install git+https://github.com/Joshua3212/dionysus.git#egg=dionysus
+
+For more information about how to use this package please check the example at ./example.py.
+Good luck!
