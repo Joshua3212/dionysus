@@ -1,8 +1,8 @@
-from src.app import App
+from dionysus.app import App
 from schema import Optional
 
-# from src.adapters.redis import RedisAdapter
-from src.adapters.dummy import DummyAdapter
+# from dionysus.adapters.redis import RedisAdapter
+from dionysus.adapters.dummy import DummyAdapter
 
 
 """
@@ -24,7 +24,7 @@ d = DummyAdapter()
 
 """
     You need to define an on_recv and on_send function.
-    Feel free to write your own adapters. Check ./src/adapters/redis.py
+    Feel free to write your own adapters. Check ./dionysus/adapters/redis.py
 """
 
 """

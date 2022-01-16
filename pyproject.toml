@@ -1,9 +1,0 @@
-[build-system]
-requires = [
-    "setuptools>=60",
-    "wheel",
-    "redis>=4.1.0",
-    "schema>=0.7.5"
-]
-build-backend = "setuptools.build_meta"
-
