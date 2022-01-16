@@ -18,23 +18,22 @@ class RedisAdapter:
 
     def on_data(self, callback):
         for item in self.pubsub.listen():
-            print(item)
+            print(f"{int(time.time())} -- got data -- {item['data']}")
+            # KILL service if kill signal is emited
             if item["data"] == b"KILL":
-                """
-                KILL service if kill signal is emited
-                """
                 self.pubsub.unsubscribe()
-                print("-- unsubscribed")
+                print("-- got KILL signal")
                 break
             else:
                 try:
                     data = json.loads(item["data"])
                 except:
                     data = {"data": item["data"]}
-                if not "route" in data:
-                    data["route"] = ""
-                callback(data["route"], data)
+                if not "indentifier" in data:
+                    data["indentifier"] = ""
+                callback(data["indentifier"], data)
 
     def on_send(self, data):
         for channel in self.channels:
+            print(f"{int(time.time())} -- sent data -- {data}")
             self.redis.publish(channel, json.dumps(data))
