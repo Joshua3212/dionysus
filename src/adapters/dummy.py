@@ -3,7 +3,7 @@
 """
 
 
-class RedisAdapter:
+class DummyAdapter:
     def __init__(self):
         pass
 
