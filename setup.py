@@ -23,7 +23,7 @@ def long_description():
 
 setup(
     name="dionysus",
-    version=0.1.0,
+    version="0.1.1",
     description="Tiny framework for interacting with redis pubsub and other protocols using custom adapters",
     long_description=long_description(),
     long_description_content_type="text/markdown",
