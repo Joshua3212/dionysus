@@ -20,7 +20,7 @@ setup(
     author="Joshua3212",
     author_email="some@mail.com",
     license="MIT",
-    packages=["dioysus"],
+    packages=["dionysus"],
     python_requires=">=3.7",
     install_requires=install_requires,
     project_urls={
