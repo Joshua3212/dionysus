@@ -40,10 +40,9 @@ a = App(on_recv=d.on_data, on_send=d.on_send)
 """
 
 
-data_schema = {"route": str, "req": dict, Optional("name"): str}
-response_schema = {
-    "a": str,
-}
+data_schema = {"a": str, "b": dict}
+
+response_schema = {"a": str}
 
 
 """
