@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+import dionysus
 
 install_requires = ["redis>=4.1.0", "schema>=0.7.5"]
 
@@ -12,12 +13,12 @@ def long_description():
 
 setup(
     name="dionysus",
-    version="0.1.1",
-    description="Tiny framework for interacting with redis pubsub and other protocols using custom adapters",
+    version=dionysus.__version__,
+    description=dionysus.__description__,
     long_description=long_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/Joshua3212/dionysus",
-    author="Joshua3212",
+    author=dionysus.__author__,
     author_email="some@mail.com",
     license="MIT",
     packages=["dionysus", "dionysus.utils", "dionysus.adapters"],
